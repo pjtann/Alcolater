@@ -28,16 +28,16 @@
                                     <constraint firstAttribute="width" constant="114" id="zE5-FO-dVb"/>
                                 </constraints>
                             </slider>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y53-85-add">
-                                <rect key="frame" x="226" y="96" width="149" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y53-85-add">
+                                <rect key="frame" x="244" y="96" width="113" height="45"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
                                 <state key="normal" title="Calculate">
                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="???" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MWa-sx-Ouv">
-                                <rect key="frame" x="279" y="134" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MWa-sx-Ouv">
+                                <rect key="frame" x="244" y="149" width="113" height="26"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -46,6 +46,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="MWa-sx-Ouv" firstAttribute="width" secondItem="y53-85-add" secondAttribute="width" id="09m-fG-fCP"/>
                             <constraint firstItem="lKg-BR-Z9x" firstAttribute="centerX" secondItem="6QK-iy-agJ" secondAttribute="centerX" id="3jj-zY-MbC"/>
                             <constraint firstItem="y53-85-add" firstAttribute="centerX" secondItem="6QK-iy-agJ" secondAttribute="centerX" constant="0.5" id="3lI-3X-l8Q"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MWa-sx-Ouv" secondAttribute="trailing" constant="15" id="5ws-dc-KJi"/>
@@ -66,6 +67,7 @@
                             <constraint firstItem="MWa-sx-Ouv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="hZo-bs-2DU"/>
                             <constraint firstItem="y53-85-add" firstAttribute="top" secondItem="6QK-iy-agJ" secondAttribute="bottom" constant="8" id="lAS-cb-l7W"/>
                             <constraint firstItem="lKg-BR-Z9x" firstAttribute="width" secondItem="6QK-iy-agJ" secondAttribute="width" id="mcD-Js-OaN"/>
+                            <constraint firstItem="MWa-sx-Ouv" firstAttribute="centerX" secondItem="y53-85-add" secondAttribute="centerX" id="nE3-zH-vAH"/>
                             <constraint firstItem="y53-85-add" firstAttribute="top" secondItem="6QK-iy-agJ" secondAttribute="bottom" constant="8" symbolic="YES" id="qkd-DK-AD8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="y53-85-add" secondAttribute="trailing" constant="15" id="uop-iH-6xc"/>
                             <constraint firstItem="y53-85-add" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="210" id="zRY-hp-zeR"/>
@@ -84,7 +86,9 @@
                                 <exclude reference="zRY-hp-zeR"/>
                                 <exclude reference="Imn-1Q-ocG"/>
                                 <exclude reference="MR6-ot-TIV"/>
+                                <exclude reference="5ws-dc-KJi"/>
                                 <exclude reference="eqd-hT-wJZ"/>
+                                <exclude reference="hZo-bs-2DU"/>
                             </mask>
                         </variation>
                         <connections>
