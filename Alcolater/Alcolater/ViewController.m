@@ -40,6 +40,8 @@
 - (IBAction)sliderValueDidChange:(UISlider *)sender {
     NSLog(@"Slider valued changed to %f", sender.value);
     [self.beerPercentTextField resignFirstResponder];
+    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) sender.value]];
+    
 }
 
 - (IBAction)buttonPressed:(id)sender {
