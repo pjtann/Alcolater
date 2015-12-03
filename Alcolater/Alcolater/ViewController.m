@@ -40,8 +40,9 @@
 - (IBAction)sliderValueDidChange:(UISlider *)sender {
     NSLog(@"Slider valued changed to %f", sender.value);
     [self.beerPercentTextField resignFirstResponder];
-    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) sender.value]];
     
+    //[self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) sender.value]];
+
 }
 
 - (IBAction)buttonPressed:(id)sender {
@@ -57,6 +58,13 @@
     float alcoholPercentageOfWine = 0.13; // 13 % is average
     float ouncesOfAlcoholPerWineGlass = ouncesInOneWineGlass * alcoholPercentageOfWine;
     float numberOfWineGlasesForEquivilantAlcoholAmount = ouncesOfAlcoholTotal / ouncesOfAlcoholPerWineGlass;
+    
+    // convert the float to a whole number; display it as a badge on the tab bar menu item; using
+    // "ceilf" to round up to the nearest whole number
+    int badgeWineNumber = ceilf(numberOfWineGlasesForEquivilantAlcoholAmount);
+    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", badgeWineNumber]];
+    
+    
     // decide whether to use "beer"/"beers" and "glass"/"glasses"
     NSString *beerText;
     if (numberOfBeers == 1){

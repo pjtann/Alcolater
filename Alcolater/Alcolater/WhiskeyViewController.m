@@ -42,6 +42,12 @@
     float ouncesOfAlcoholPerWhiskeyGlass = ouncesInOneWhiskeyGlass * alcoholPercentageOfWhiskey;
     float numberOfWhiskeyGlassesForEquivalentAlcoholAmount = ouncesOfAlcoholTotal / ouncesOfAlcoholPerWhiskeyGlass;
     
+    // convert the float to a whole number; display it as a badge on the tab bar menu item; using
+    // "ceilf" to round up to the nearest whole number
+    int badgeWineNumber = ceilf(numberOfWhiskeyGlassesForEquivalentAlcoholAmount);
+    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", badgeWineNumber]];
+    
+    
     NSString *beerText;
     
     if (numberOfBeers == 1) {
