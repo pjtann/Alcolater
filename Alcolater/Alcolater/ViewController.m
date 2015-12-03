@@ -39,6 +39,27 @@
 }
 - (IBAction)sliderValueDidChange:(UISlider *)sender {
     NSLog(@"Slider valued changed to %f", sender.value);
+    // define variables to hold singular or plural of glasses or shots
+    NSString *wineGlasses;
+    NSString *whiskeyGlasses;
+    // determine if singular or plural needed
+    if ((int)sender.value == 1){
+        wineGlasses = @"glass";
+        whiskeyGlasses = @"shot";
+    }else{
+        wineGlasses = @"glasses";
+        whiskeyGlasses = @"shots";
+    }
+    // determine which controller is using the slider; wine or whiskey based on the title, then set
+    // title with addition of number of shots for whiskey and glasses for wine
+    if ([self.navigationItem.title containsString:@"Wine"]){
+        NSString *myGlasses = [NSString stringWithFormat: @"Wine (%d %@)", (int)sender.value, wineGlasses];
+            self.navigationItem.title = myGlasses;
+    }else{
+        NSString *myShots = [NSString stringWithFormat: @"Whiskey (%d %@)", (int)sender.value, whiskeyGlasses];
+            self.navigationItem.title = myShots;
+    }
+
     [self.beerPercentTextField resignFirstResponder];
 }
 
